@@ -91,8 +91,8 @@ export default {
 	border-radius: 10px;
 }
 .shane:hover {
-	background-color: aqua;
-	opacity: 80%;
+	background-color: rgb(25, 0, 255);
+	opacity: 30%;
 }
 
 .name {

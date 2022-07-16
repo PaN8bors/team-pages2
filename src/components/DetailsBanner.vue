@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="column">
 				<div class="blue-column">
-					<p class="intro">Meet {{firstName}}</p>
+					<p class="intro">Meet {{user.name}}</p>
 				</div>
 			</div>
 		</div>
@@ -11,13 +11,33 @@
 </template>
 
 <script>
+import { UserService } from "@/services/UserServices";
+
 export default {
 	name: "DetailsBanner",
-	data() {
+
+	data: function() {
 		return {
-			firstName : "Parish" 
+			loading: false,
+			user: {},
+			errorMessage: null
+		};
+	},
+
+	created: async function() {
+		let userId = this.$route.params.userId;
+
+		try {
+			this.loading = true;
+			let response = await UserService.getUser(userId);
+			console.log(response.data)
+			this.loading = false;
+			this.user = response.data;
+		} catch (error) {
+			this.loading = false;
+			this.errorMessage = error;
 		}
-	}
+	},
 };
 </script>
 

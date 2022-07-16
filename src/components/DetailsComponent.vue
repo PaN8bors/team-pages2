@@ -35,13 +35,6 @@
 					voluptatum quibusdam?
 				</h5>
 			</div>
-			<!-- <div class="icons">
-				<img class="sampleIcon" src="..\assets\LinkedIn.webp" />
-				<img class="sampleIcon" src="..\assets\GitHub.webp" />
-				<img class="sampleIcon" src="..\assets\Insta.webp" />
-				<img class="sampleIcon" src="..\assets\YouTube.webp" />
-				<img class="sampleIcon" src="..\assets\Link.webp" />
-			</div> -->
 		</div>
 		<div class="icons">
 
@@ -65,7 +58,6 @@
 
 <script>
 import { UserService } from "@/services/UserServices";
-// import axios from 'axios'
 
 export default {
 	name: "DetailsComponent",
@@ -92,13 +84,6 @@ export default {
 			this.errorMessage = error;
 		}
 	},
-
-
-	// created() {
-	// 	axios.get("https://jsonplaceholder.typicode.com/users/${userId}").then((res) => {
-	// 		this.users = res.data;
-	// 	});
-	// },
 };
 </script>
 
