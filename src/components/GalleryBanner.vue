@@ -1,0 +1,72 @@
+<template>
+	<div class="some-page-wrapper">
+			<div class="row">
+			<div class="column">
+				<div class="blue-column">
+					<p>Meet Our Team</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+export default {
+	name: "GalleryBanner",
+};
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.some-page-wrapper {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 75px;
+	align-items: center;
+	padding-bottom: 1vh;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+.logo {
+	max-height: auto;
+	max-width: 60px;
+	padding-left: 10%;
+}
+
+.blue-column {
+	display: flex;
+	background-image: url('../assets/Team.png');
+	height: 200px;
+	align-items: center;
+	padding-left: 10%;
+}
+
+p {
+	color: white;
+	font-size: 48px;
+	padding: 0%
+;
+}
+
+</style>

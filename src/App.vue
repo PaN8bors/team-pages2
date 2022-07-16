@@ -1,9 +1,11 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="logo-row">
+				<img class="logo" src="@/assets/SnapIT.webp">
+			<a>
+				<router-link to="/">team gallery</router-link>
+			</a>
+		</div>
+  <router-view/>
 </template>
 
 <style>
@@ -15,7 +17,38 @@
   color: #2c3e50;
 }
 
-nav {
+a {
+	margin-left: 10px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	/* line-height: 70px; */
+	color: #747474;
+}
+
+a:link {
+	text-decoration: none;	
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:active {
+	color: black;
+  text-decoration: underline;
+}
+
+h1:hover {
+	color: black;
+}
+
+/* nav {
   padding: 30px;
 }
 
@@ -26,5 +59,5 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
