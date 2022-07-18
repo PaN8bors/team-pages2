@@ -11,14 +11,14 @@
 			vehicula massa.
 		</span>
 		<div class="card" v-for="user of users" :key="user.id">
-			<router-link :to="'/details/' + user.id"
-				><img
+			<router-link :to="'/details/' + user.id" 
+				><div class='blue-box'><img
 					class="shane"
 					src="@/assets/sudheer.webp"
-					alt="Avatar"
+					alt="avatar"
 					style="width: 100%"
-			/></router-link>
-			<div class="container">
+			/></div></router-link>
+			<div>
 				<h4 class="name">
 					<b>{{ user.name }}</b>
 				</h4>
@@ -62,10 +62,11 @@ export default {
 .page-box {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	gap: 20px;
 	padding-left: 10%;
 	padding-right: 10%;
+	padding-bottom: 10%;
 	font-family: "Poppins", sans-serif;
 }
 
@@ -80,19 +81,20 @@ export default {
 .card {
 	transition: 0.3s;
 	width: 300px;
-	text-align: center;
 }
 
-.container {
-	/* padding: 2px 16px; */
+.blue-box {
+	background-color:rgb(0, 0, 88);
+	height: 300px;
+	border-radius: 10px;
 }
 
 .shane {
 	border-radius: 10px;
+	opacity: 80%;
 }
 .shane:hover {
-	background-color: rgb(25, 0, 255);
-	opacity: 30%;
+	opacity: 100%
 }
 
 .name {
